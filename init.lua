@@ -1,3 +1,4 @@
+vim.cmd "autocmd User TelescopePreviewerLoaded setlocal number"
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -81,5 +82,5 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-  end,
+  end, 
 }

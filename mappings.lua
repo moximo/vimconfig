@@ -18,8 +18,28 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["gh"] = {"0" ,desc = "go head" },
+    ["gl"] = {"$" ,desc = "go end" },
+    ["<A-j>"]={":m .+1<CR>=="},
+    ["<A-k>"]={":m .-2<CR>=="},
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+  },
+  v ={
+    ["<A-k>"]= {":m '<-2<CR>gv=gv"},
+    ["<A-j>"]= {":m '>+1<CR>gv=gv"},
+    ["<leader>ge"]={
+      function()
+        local chatgpt=require("chatgpt")
+        chatgpt.edit_with_instructions()
+      end,
+      desc="Edit with ChatGPT instructions"},
+  },
+  i={
+    ["<A-j>"]={"<Esc>ja"},
+    ["<A-k>"]={"<Esc>ka"},
+    ["<A-h>"]={"<Esc>i"},
+    ["<A-l>"]={"<Esc>la"},
   },
   t = {
     -- setting a mapping to false will disable it
