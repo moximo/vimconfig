@@ -22,6 +22,8 @@ return {
     ["gl"] = {"$" ,desc = "go end" },
     ["<A-j>"]={":m .+1<CR>=="},
     ["<A-k>"]={":m .-2<CR>=="},
+    ["<A-Enter>"]={":WindowsMaximize<CR>"},
+    ["<leader><leader>"]={":WindowsEqualize<CR>"},
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
@@ -40,6 +42,8 @@ return {
     ["<A-k>"]={"<Esc>ka"},
     ["<A-h>"]={"<Esc>i"},
     ["<A-l>"]={"<Esc>la"},
+  },
+  c={
   },
   t = {
     -- setting a mapping to false will disable it

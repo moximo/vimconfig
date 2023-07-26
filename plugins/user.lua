@@ -26,4 +26,22 @@ return {
      "nvim-telescope/telescope.nvim"
     }
    },
+   {
+    "anuvyklack/windows.nvim",
+    event = "VeryLazy",
+    dependencies = {
+     "anuvyklack/middleclass",
+     "anuvyklack/animation.nvim"
+    },
+    config = function()
+     vim.o.winwidth = 10
+     vim.o.winminwidth = 10
+     vim.o.equalalways = true
+     require('windows').setup({
+      autowidth = {			--		       |windows.autowidth|
+       enable = false,
+      }
+     })
+    end,
+}
  }
