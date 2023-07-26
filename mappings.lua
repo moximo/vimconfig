@@ -22,8 +22,9 @@ return {
     ["gl"] = {"$" ,desc = "go end" },
     ["<A-j>"]={":m .+1<CR>=="},
     ["<A-k>"]={":m .-2<CR>=="},
-    ["<A-Enter>"]={":WindowsMaximize<CR>"},
-    ["<leader><leader>"]={":WindowsEqualize<CR>"},
+    ["<A-Enter>"]={":WindowsMaximize<CR>",desc="windowMaxSize"},
+    ["<leader><leader>"]={":WindowsEqualize<CR>",desc="windowEqualize"},
+    ["<leader>ud"]={":UndotreeToggle<CR>",desc="show undotree"},
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
