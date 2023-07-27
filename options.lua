@@ -17,8 +17,7 @@ return {
     icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
-
-    undotree_Windowlayout = 3,
+    undotree_WindowLayout = 3,
     undotree_ShortIndicators = 0,
     undotree_SplitWidth = 30,
     undotree_DiffpanelHeight = 10,
