@@ -37,8 +37,13 @@ return {
 {
  'mbbill/undotree',
  event = "VeryLazy",
- config = function()
- end,
+},
+{
+  "ggandor/leap.nvim",
+  name = "leap",
+  config = function()
+    require("leap").add_default_mappings()
+  end,
 },
 {
  "kylechui/nvim-surround",
@@ -58,5 +63,31 @@ return {
 --     'change quot*es'            cs'"            "change quotes"
 --     <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1>
 --     delete(functi*on calls)     dsf             function calls
+},
+{
+ "hiphish/rainbow-delimiters.nvim",
+ event = "VeryLazy",
+ config = function()
+  local rainbow_delimiters = require 'rainbow-delimiters'
+  vim.g.rainbow_delimiters = {
+   strategy = {
+    [''] = rainbow_delimiters.strategy['global'],
+    vim = rainbow_delimiters.strategy['local'],
+   },
+   query = {
+    [''] = 'rainbow-delimiters',
+    lua = 'rainbow-blocks',
+   },
+   highlight = {
+    'RainbowDelimiterRed',
+    'RainbowDelimiterYellow',
+    'RainbowDelimiterBlue',
+    'RainbowDelimiterOrange',
+    'RainbowDelimiterGreen',
+    'RainbowDelimiterViolet',
+    'RainbowDelimiterCyan',
+   },
+  } 
+ end,
 },
 }
