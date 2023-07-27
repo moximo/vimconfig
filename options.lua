@@ -24,7 +24,6 @@ return {
     undotree_SplitWidth = 30,
     undotree_DiffpanelHeight = 10,
     undotree_DiffAutoOpen = 1,
-    undotree_SetFocusWhenToggle = 0,
   },
 }
 -- If you need more control, you can use the function()...end notation
