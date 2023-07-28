@@ -102,4 +102,8 @@ return {
       }
     end,
   },
+  {
+    "BlackLight/nvim-http",
+    event = "VeryLazy",
+  }
 }

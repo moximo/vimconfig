@@ -3,6 +3,20 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+vim.cmd(([[
+autocmd FileType http lua restHttp()
+]]))
+
+function restHttp()
+  local wk = require("which-key")
+  wk.register({
+    ["<leader>r"] = {
+      name="run some command",
+      h={":Http<CR>","run rest http"}
+    },
+  })
+end
+
 return {
   -- first key is the mode
   n = {
@@ -18,8 +32,7 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    ["gh"] = {"0" ,desc = "go head" },
-    ["gl"] = {"$" ,desc = "go end" },
+    ["<leader>cd"] ={":silent  cd %:h<CR>",desc="cd %:h"},
     ["<A-j>"]={":m .+1<CR>=="},
     ["<A-k>"]={":m .-2<CR>=="},
     ["<A-Enter>"]={":WindowsMaximize<CR>",desc="windowMaxSize"},
