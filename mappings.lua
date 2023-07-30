@@ -3,9 +3,6 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
-vim.cmd(([[
-autocmd FileType http lua restHttp()
-]]))
 
 function restHttp()
   local wk = require("which-key")
@@ -38,10 +35,14 @@ return {
     ["<A-Enter>"]={":WindowsMaximize<CR>",desc="windowMaxSize"},
     ["<leader><leader>"]={":WindowsEqualize<CR>",desc="windowEqualize"},
     ["<leader>ud"]={":UndotreeToggle<CR>",desc="show undotree"},
+    ["<leader>tr"]={
+        ":Pantran<CR>",
+      desc="translate"},
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   v ={
+     --  mapmode-v 仅在视觉和选择模式下激活
     ["<A-k>"]= {":m '<-2<CR>gv=gv"},
     ["<A-j>"]= {":m '>+1<CR>gv=gv"},
     ["<leader>ge"]={
@@ -50,6 +51,16 @@ return {
         chatgpt.edit_with_instructions()
       end,
       desc="Edit with ChatGPT instructions"},
+  },
+  s={
+     --  mapmode-x 仅在选择模式下激活
+  },
+  x={
+     --  mapmode-x 仅在视觉模式下激活
+    ["<leader>tr"]={
+      ":Pantran<CR>",
+      desc="translate"
+    },
   },
   i={
     ["<A-j>"]={"<Esc>ja"},
