@@ -9,6 +9,7 @@ return function()
   local bg = normal.bg
 
   return {
+    Normal = {background_colour = "#000000"},
     -- flash
     FlashMatch = { bg = bg, fg = "#89b4fa", bold = true, italic = true },
     FlashCurrent = { bg = bg, fg = "#04a5e5", bold = true, italic = true, underline = true },
