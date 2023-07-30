@@ -7,9 +7,7 @@ return function()
   -- get highlights from highlight groups
   local normal = get_hlgroup "Normal"
   local bg = normal.bg
-
   return {
-    Normal = {bg = "None"},
     -- flash
     FlashMatch = { bg = bg, fg = "#89b4fa", bold = true, italic = true },
     FlashCurrent = { bg = bg, fg = "#04a5e5", bold = true, italic = true, underline = true },
