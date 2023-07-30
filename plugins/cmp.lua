@@ -30,34 +30,34 @@ return {
         { name = "buffer", priority = 250 },
       },
       mapping = {
-        ["<CR>"] = cmp.config.disable,
+        -- ["<CR>"] = cmp.config.disable,
         -- ctrl + e关闭补全窗口
         ["<C-k>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
         ["<C-j>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select },
-        ["<Tab>"] = cmp.mapping(function(fallback)
-          -- idea输入方式
-          if cmp.visible() then
-            local entry = cmp.get_selected_entry()
-            if not entry then
-              cmp.select_next_item { behavior = cmp.SelectBehavior.Select }
-            else
-              if has_words_before() then
-                cmp.confirm {
-                  behavior = cmp.ConfirmBehavior.Replace,
-                  select = false,
-                }
-              else
-                cmp.confirm {
-                  behavior = cmp.ConfirmBehavior.Insert,
-                  select = false,
-                }
-              end
-            end
-          else
-            fallback()
-          end
-        end, { "i", "s" }),
-        ["<S-Tab>"] = cmp.config.disable,
+        -- ["<Tab>"] = cmp.mapping(function(fallback)
+        --   -- idea输入方式
+        --   if cmp.visible() then
+        --     local entry = cmp.get_selected_entry()
+        --     if not entry then
+        --       cmp.select_next_item { behavior = cmp.SelectBehavior.Select }
+        --     else
+        --       if has_words_before() then
+        --         cmp.confirm {
+        --           behavior = cmp.ConfirmBehavior.Replace,
+        --           select = false,
+        --         }
+        --       else
+        --         cmp.confirm {
+        --           behavior = cmp.ConfirmBehavior.Insert,
+        --           select = false,
+        --         }
+        --       end
+        --     end
+        --   else
+        --     fallback()
+        --   end
+        -- end, { "i", "s" }),
+        -- ["<S-Tab>"] = cmp.config.disable,
       },
     })
   end,
