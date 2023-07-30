@@ -32,8 +32,8 @@ return {
       mapping = {
         -- ["<CR>"] = cmp.config.disable,
         -- ctrl + e关闭补全窗口
-        ["<C-k>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
-        ["<C-j>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select },
+        -- ["<C-k>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
+        -- ["<C-j>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select },
         -- ["<Tab>"] = cmp.mapping(function(fallback)
         --   -- idea输入方式
         --   if cmp.visible() then
