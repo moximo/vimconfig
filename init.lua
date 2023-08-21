@@ -1,8 +1,7 @@
 vim.cmd "autocmd User TelescopePreviewerLoaded setlocal number"
--- vim.cmd "autocmd FileType http lua restHttp()"
 
 vim.cmd "au BufNewFile,BufRead *.http :setl ft=http"
-vim.cmd "au FileType http lua restHttp()"
+-- vim.cmd "au FileType http lua restHttp()"
 return {
   -- Configure AstroNvim updates
   updater = {

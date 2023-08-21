@@ -4,15 +4,15 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 
-function restHttp()
-  local wk = require("which-key")
-  wk.register({
-    ["<leader>r"] = {
-      name="run some command",
-      h={":Http<CR>","run rest http"}
-    },
-  })
-end
+-- function restHttp()
+--   local wk = require("which-key")
+--   wk.register({
+--     ["<leader>r"] = {
+--       name="run some command",
+--       h={":Http<CR>","run rest http"}
+--     },
+--   })
+-- end
 
 return {
   -- first key is the mode
@@ -36,8 +36,18 @@ return {
     ["<leader><leader>"]={":WindowsEqualize<CR>",desc="windowEqualize"},
     ["<leader>ud"]={":UndotreeToggle<CR>",desc="show undotree"},
     ["<leader>tr"]={
-        ":Pantran<CR>",
+      ":Pantran<CR>",
       desc="translate"},
+
+    ["<leader>r"] = { name = "rest http client" },
+    ["<leader>rh"]={
+      "<Plug>RestNvim",
+      desc="run rest http clent"
+    },
+    ["<leader>rc"]={
+      "<Plug>RestNvimPreview",
+      desc="show rest curl"
+    },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

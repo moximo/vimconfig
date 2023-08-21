@@ -3,7 +3,7 @@ return {
   opts = function(_, opts)
     -- add more things to the ensure_installed table protecting againsit community packs modifying it
     opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-      {"html", "css", "vim", "lua", "javascript", "typescript", "c", "cpp", "python"},
+      {"html", "css", "vim", "lua", "javascript", "typescript", "c", "cpp", "python","http","json","rust"},
       -- 启用代码高亮
       highlight = {
         enable = true,
