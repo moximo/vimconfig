@@ -142,10 +142,9 @@ return {
         jump_to_request = false,
         env_file = '.env',
         custom_dynamic_variables = {
-          ["$date"] = function()`
-            local os_date = os.date('%Y-%m-%d %H:%m:%S')`
-            return os_date`
-          end,`
+          ["$date"] = function()
+            return os.date('%Y-%m-%d %H:%m:%S')
+          end,
         },
         yank_dry_run = true,
       })
