@@ -55,12 +55,6 @@ return {
      --  mapmode-v 仅在视觉和选择模式下激活
     ["<A-k>"]= {":m '<-2<CR>gv=gv"},
     ["<A-j>"]= {":m '>+1<CR>gv=gv"},
-    ["<leader>ge"]={
-      function()
-        local chatgpt=require("chatgpt")
-        chatgpt.edit_with_instructions()
-      end,
-      desc="Edit with ChatGPT instructions"},
   },
   s={
      --  mapmode-x 仅在选择模式下激活
