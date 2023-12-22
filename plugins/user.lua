@@ -28,6 +28,7 @@ return {
     event = "BufRead",
   },
   {
+    -- auto expan window with `alt+enter`
     "anuvyklack/windows.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -46,6 +47,7 @@ return {
     end,
   },
   {
+    -- chatgpt suport
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     config = function()
@@ -63,10 +65,12 @@ return {
     },
   },
   {
+    -- undotree
     "mbbill/undotree",
     event = "VeryLazy",
   },
   {
+    -- simple to find word, with `s`
     "folke/flash.nvim",
     event = "VeryLazy",
     ---@type Flash.Config
@@ -154,7 +158,9 @@ return {
       })
     end
   },
-  {  "potamides/pantran.nvim",
+  {  
+    -- translation with `<leader>tr`
+    "potamides/pantran.nvim",
     event = "VeryLazy",
     config= function()
       require("pantran").setup{
@@ -165,7 +171,7 @@ return {
         engines = {
           yandex = {
             -- Default languages can be defined on a per engine basis. In this case
-            -- `:lua require("pantran.async").run(function()
+            -- `:lua require("pantran.async").jun(function()
             -- vim.pretty_print(require("pantran.engines").yandex:languages()) end)`
             -- can be used to list available language identifiers.
             default_source = "auto",
@@ -176,6 +182,16 @@ return {
             }
           },
         },
+      }
+    end
+  },
+  {
+    -- dependency "silicon" command,use with `<,'>:Silicon`
+    "segeljakt/vim-silicon", 
+    event = "VeryLazy",
+    config = function()
+       vim.g.silicon={
+        output="~/Pictures/Screenshots/silicon-{time:%Y-%m-%d-%H%M%S}.png"
       }
     end
   },
