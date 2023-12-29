@@ -13,6 +13,29 @@
 --     },
 --   })
 -- end
+--
+--
+vim.cmd('autocmd FileType * lua setKeybinds()')
+function setKeybinds()
+    local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
+    local opts = { prefix = '<localleader>', buffer = 0 }
+    require "plugins.configs.which-key"(plugin, opts) 
+    -- include the default astronvim config that calls the setup call
+    -- Add bindings which show up as group name
+    local wk = require "which-key"
+
+    if fileTy == 'markdown' then
+        wk.register({
+            ['<leader>m'] = {
+              name="markdown",
+              p={":MarkdownPreview<CR>","markdown preview",mode={"n"}}
+            },
+        })
+    elseif fileTy == 'sh' then
+    end
+end
+
+
 
 return {
   -- first key is the mode

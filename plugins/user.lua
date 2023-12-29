@@ -214,4 +214,10 @@ return {
       vim.g.db_ui_save_location="~/.db_ui_sql"
     end,
   },
+  {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      ft = { "markdown" },
+      build = function() vim.fn["mkdp#util#install"]() end,
+  },
 }
