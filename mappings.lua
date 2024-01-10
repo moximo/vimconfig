@@ -71,6 +71,18 @@ return {
       "<Plug>RestNvimPreview",
       desc="show rest curl"
     },
+    ["<leader>gw"]={
+      ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+      desc="telescope-live-grep-args"
+    },
+    ["<leader>td"]={
+      ":Telescope todo-comments<CR>",
+      desc="telescope todo-comments"
+    },
+    -- trouble
+    ["<leader>xx"] = { "<cmd>TroubleToggle document_diagnostics<cr>", noremap = true, silent = true },
+    
+
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

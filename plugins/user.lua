@@ -220,4 +220,8 @@ return {
       ft = { "markdown" },
       build = function() vim.fn["mkdp#util#install"]() end,
   },
+  {
+    'mattn/emmet-vim', 
+     event = "VeryLazy",
+  },
 }
