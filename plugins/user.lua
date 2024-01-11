@@ -224,4 +224,24 @@ return {
     'mattn/emmet-vim', 
      event = "VeryLazy",
   },
+  {
+    --依赖vineflower.jar(https://github.com/Vineflower/vineflower)
+    "alienman5k/jdecomp.nvim",
+    event = "VeryLazy",
+    opts = {
+      decompiler = 'fernflower', -- cfr, procyon, fernflower
+      provider = {
+        cfr = {
+          -- bin = 'cfr'
+          jar = os.getenv('HOME') .. '/Software/cfr-0.152.jar'
+        },
+        procyon = {
+          jar = os.getenv('HOME') .. '/Software/procyon-decompiler-0.6.0.jar'
+        },
+        fernflower = {
+          jar = os.getenv('HOME') .. '/Software/vineflower-1.9.3.jar'
+        }
+    }
+  }
+  }
 }
