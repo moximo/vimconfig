@@ -13,5 +13,8 @@ return function()
     FlashCurrent = { bg = bg, fg = "#04a5e5", bold = true, italic = true, underline = true },
     FlashLabel = { bg = bg, fg = "#ff007c", bold = true },
     FlashBackdrop = { bg = bg, fg = "#6c7086" },
+    -- 自定义的注释颜色
+    comment = { bg = bg, fg = "#6c7086" },
+    -- LineNr={ bg = bg, fg = "#e1eaff" }
   }
 end
