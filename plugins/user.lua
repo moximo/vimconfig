@@ -158,7 +158,7 @@ return {
       })
     end
   },
-  {  
+  {
     -- translation with `<leader>tr`
     "potamides/pantran.nvim",
     event = "VeryLazy",
@@ -187,7 +187,7 @@ return {
   },
   {
     -- dependency "silicon" command,use with `<,'>:Silicon`
-    "segeljakt/vim-silicon", 
+    "segeljakt/vim-silicon",
     event = "VeryLazy",
     config = function()
        vim.g.silicon={
@@ -221,7 +221,7 @@ return {
       build = function() vim.fn["mkdp#util#install"]() end,
   },
   {
-    'mattn/emmet-vim', 
+    'mattn/emmet-vim',
      event = "VeryLazy",
   },
   {
