@@ -19,7 +19,7 @@ vim.cmd('autocmd FileType * lua setKeybinds()')
 function setKeybinds()
     local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
     local opts = { prefix = '<localleader>', buffer = 0 }
-    require "plugins.configs.which-key"(plugin, opts) 
+    require "plugins.configs.which-key"(plugin, opts)
     -- include the default astronvim config that calls the setup call
     -- Add bindings which show up as group name
     local wk = require "which-key"
@@ -81,8 +81,6 @@ return {
     },
     -- trouble
     ["<leader>xx"] = { "<cmd>TroubleToggle document_diagnostics<cr>", noremap = true, silent = true },
-    
-
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

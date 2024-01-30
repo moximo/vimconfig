@@ -10,6 +10,7 @@ return {
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
+    maplocalleader = " ",
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true, -- enable completion at start
     autopairs_enabled = true, -- enable autopairs at start
@@ -24,7 +25,7 @@ return {
     undotree_SplitWidth = 30,
     undotree_DiffpanelHeight = 10,
     undotree_DiffAutoOpen = 1,
-  },
+  }
 }
 -- If you need more control, you can use the function()...end notation
 -- return function(local_vim)
