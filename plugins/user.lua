@@ -247,4 +247,17 @@ return {
       }
     }
   },
+-- {
+--   'mrcjkb/rustaceanvim',
+--   version = '^4', -- Recommended
+--   ft = { 'rust' },
+-- },
+{
+  "m4xshen/smartcolumn.nvim",
+  event = { "InsertEnter", "User AstroFile" },
+  opts = {
+    colorcolumn="120",
+    disabled_filetypes = { "alpha", "neo-tree", "starter", "help", "text", "markdown" },
+  },
+}
 }

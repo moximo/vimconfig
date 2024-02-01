@@ -16,5 +16,6 @@ return function()
     -- 自定义的注释颜色
     comment = { bg = bg, fg = "#6c7086" },
     -- LineNr={ bg = bg, fg = "#e1eaff" }
+    ColorColumn={bg = "#39434e" },
   }
 end
