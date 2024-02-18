@@ -257,7 +257,7 @@ return {
   event = { "InsertEnter", "User AstroFile" },
   opts = {
     colorcolumn="120",
-    disabled_filetypes = { "alpha", "neo-tree", "starter", "help", "text", "markdown" },
+    disabled_filetypes = { "alpha", "neo-tree", "starter", "help", "text", "markdown" ,"mason","lazy" },
   },
 }
 }
