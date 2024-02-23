@@ -4,17 +4,6 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 
--- function restHttp()
---   local wk = require("which-key")
---   wk.register({
---     ["<leader>r"] = {
---       name="run some command",
---       h={":Http<CR>","run rest http"}
---     },
---   })
--- end
---
---
 vim.cmd('autocmd FileType * lua setKeybinds()')
 function setKeybinds()
     local fileTy = vim.api.nvim_buf_get_option(0, "filetype")

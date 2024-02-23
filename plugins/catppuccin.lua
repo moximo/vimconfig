@@ -38,6 +38,7 @@ return {
     color_overrides = {},
     custom_highlights = {},
     integrations = {
+      neotest = true,
       aerial = true,
       alpha = true,
       coc_nvim = true,
