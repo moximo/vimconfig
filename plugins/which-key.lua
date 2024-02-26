@@ -32,15 +32,15 @@ return {
         name="lsp test",
         r ={':lua require("neotest").run.run()<CR>',"run test",mode={"n","v"}},
         d ={':lua require("neotest").run.run({strategy = "dap"})<CR>',"run test dap",mode={"n","v"}},
-        o ={':lua require("neotest").output.open({ enter = true })<CR>',"show test output",mode={"n","v"}},
-        lo ={':lua require("neotest").output.open({ enter = true,last_run=true })<CR>',"show last test output",mode={"n","v"}},
+        o ={':lua require("neotest").output.open({ enter = true,auto_close=true })<CR>',"show test output",mode={"n","v"}},
+        lo ={':lua require("neotest").output.open({ enter = true,last_run=true,auto_close=true)<CR>',"show last test output",mode={"n","v"}},
         lr ={':lua require("neotest").run.run_last()',"run last test",mode={"n","v"}},
         ld ={':lua require("neotest").run.run_last({strategy = "dap"})<CR>',"run last test dap",mode={"n","v"}},
         p ={':lua require("neotest").output_panel.toggle()<CR>',"show test output-anel",mode={"n","v"}},
         y ={':lua require("neotest").summary.toggle()<CR>',"show test summary",mode={"n","v"}},
         s ={':lua require("neotest").run.stop()<CR>',"stop test",mode={"n","v"}},
         a ={':lua require("neotest").run.attach()<CR>',"attach test",mode={"n","v"}},
-      }
+      },
     })
   end,
 }

@@ -23,7 +23,23 @@ function setKeybinds()
     elseif fileTy == 'sh' then
     end
 end
-
+function toggle_telescope()
+    local harpoon = require("harpoon")
+    local conf = require("telescope.config").values
+    local harpoon_files=harpoon:list()
+    local file_paths = {}
+    for _, item in ipairs(harpoon_files.items) do
+        table.insert(file_paths, item.value)
+    end
+    require("telescope.pickers").new({}, {
+        prompt_title = "Harpoon",
+        finder = require("telescope.finders").new_table({
+            results = file_paths,
+        }),
+        previewer = conf.file_previewer({}),
+        sorter = conf.generic_sorter({}),
+    }):find()
+end 
 
 
 return {
@@ -59,6 +75,16 @@ return {
       ":Telescope todo-comments<CR>",
       desc="telescope todo-comments"
     },
+    ["<leader>ap"]={function ()
+        local harpoon = require("harpoon")
+        harpoon:list():append()
+    end,desc="harpoon2 add"
+    },
+    ["<leader>rp"]={function ()
+        require("harpoon"):list():remove()
+    end,desc="harpoon2 mark rm"
+    },
+    ["<leader>fp"]={function() toggle_telescope() end,desc="telescope harpoon2"},
     -- trouble
     ["<leader>xx"] = { "<cmd>TroubleToggle document_diagnostics<cr>", noremap = true, silent = true },
     -- quick save
