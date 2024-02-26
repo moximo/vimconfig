@@ -51,15 +51,6 @@ return {
       ":Pantran<CR>",
       desc="translate"},
 
-    ["<leader>r"] = { name = "rest http client" },
-    ["<leader>rh"]={
-      "<Plug>RestNvim",
-      desc="run rest http clent"
-    },
-    ["<leader>rc"]={
-      "<Plug>RestNvimPreview",
-      desc="show rest curl"
-    },
     ["<leader>gw"]={
       ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
       desc="telescope-live-grep-args"
