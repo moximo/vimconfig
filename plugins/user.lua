@@ -212,6 +212,7 @@ return {
       -- Your DBUI configuration
       vim.g.db_ui_use_nerd_fonts = 1
       vim.g.db_ui_save_location="~/.db_ui_sql"
+      vim.g.db_ui_winwidth=30
     end,
   },
   {

@@ -20,7 +20,18 @@ function setKeybinds()
               p={":MarkdownPreview<CR>","markdown preview",mode={"n"}}
             },
         })
+    elseif fileTy == 'java' then
+        -- 目前neotest-java 不能支持dap,采用jdtls默认的dap 执行test 
+        wk.register({
+            ['<leader>ltd'] = {
+                require("jdtls.dap").test_nearest_method,"run test dap"
+            },
+            ['<leader>ltld'] = {
+                require("jdtls.dap").test_nearest_method,"run test dap"
+            },
+        })
     elseif fileTy == 'sh' then
+
     end
 end
 function toggle_telescope()
@@ -71,7 +82,11 @@ return {
       ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
       desc="telescope-live-grep-args"
     },
-    ["<leader>td"]={
+    ["<leader>D"]={
+      ":DBUIToggle<CR>",
+      desc="open DBUI"
+    },
+    ["<leader>fd"]={
       ":Telescope todo-comments<CR>",
       desc="telescope todo-comments"
     },
