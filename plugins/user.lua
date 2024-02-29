@@ -317,4 +317,39 @@ return {
      -- require("telescope").load_extension('harpoon')
       end,
   },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {"mfussenegger/nvim-dap"},
+    config=function(plugins,opts)
+      opts.layouts = { {
+        elements = { {
+            id = "scopes",
+            size = 0.25
+          }, {
+            id = "breakpoints",
+            size = 0.25
+          }, {
+            id = "stacks",
+            size = 0.25
+          }, {
+            id = "watches",
+            size = 0.25
+          } },
+        position = "right",
+        size = 35
+      }, {
+        elements = { {
+            id = "repl",
+            size = 0.2
+          }, {
+            id = "console",
+            size = 0.63
+          } },
+        position = "bottom",
+        size = 10
+      } }
+      require("dapui").setup(opts)
+    end
+  }
+
 }
