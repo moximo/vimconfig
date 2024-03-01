@@ -56,11 +56,13 @@ return {
           submit = "<C-Enter>",
           yank_last_code = "<C-y>",
         },
+        show_line_numbers=true,
       }
     end,
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
+      "folke/trouble.nvim",
       "nvim-telescope/telescope.nvim",
     },
   },
