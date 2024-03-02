@@ -6,7 +6,11 @@ return {
     number = true, -- sets vim.opt.number
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-    wrap = false, -- sets vim.opt.wrap
+    wrap = true, -- sets vim.opt.wrap 换行显示多于部分
+    smartcase = true, --sets vim.opt.smartcase
+    ignorecase = true, --sets vim.opt.ignorecase
+    breakindent=true, --sets vim.opt.breakindent tab虚线 
+    expandtab=true, --sets vim.opt.expandtab tab转空格
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
