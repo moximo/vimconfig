@@ -354,6 +354,11 @@ return {
       } }
       require("dapui").setup(opts)
     end
+  },
+  {
+    "sindrets/diffview.nvim",
+    event = "VeryLazy", config = function(_,opts)
+      return opts
+    end
+    },
   }
-
-}

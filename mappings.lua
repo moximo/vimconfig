@@ -102,6 +102,9 @@ return {
     ["<leader>fp"]={function() toggle_telescope() end,desc="telescope harpoon2"},
     -- trouble
     ["<leader>xx"] = { "<cmd>TroubleToggle document_diagnostics<cr>", noremap = true, silent = true },
+    ["gDo"]={":DiffviewOpen ",desc="DiffViewOpen",noremap = true, silent = true },
+    ["gDh"]={":DiffviewFileHistory ",desc="DiffviewFileHistory",noremap = true, silent = true },
+    ["gDq"]={":DiffviewClose<CR>",desc="DiffviewFileHistory",noremap = true, silent = true },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
