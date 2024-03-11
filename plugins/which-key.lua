@@ -42,7 +42,7 @@ return {
         a ={':lua require("neotest").run.attach()<CR>',"attach test",mode={"n","v"}},
       },
       ["<leader>d"]={
-        K={':lua require("dapui").float_element("scopes", {width=40,height=40,enter=true,position=true})<CR>',"debug float",mode={"n","v"}},
+        K={':lua require("dapui").float_element("scopes", {width=80,height=40,enter=true,position=true})<CR>',"debug float",mode={"n","v"}},
       },
     })
   end,
