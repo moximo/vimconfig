@@ -34,6 +34,11 @@ function setKeybinds()
 
     end
 end
+
+-- telescope 中tab 选中结果,alt q 选择选择结果,ctrl q 全部结果,发送到quick fix
+-- cdo vs ldo：全局操作 vs 局部（当前 buffer）操作
+-- cdo vs cfdo：全部操作 vs 对每个文件只操作一次
+-- silent! noautocmd cdo ... | update
 function toggle_telescope()
     local harpoon = require("harpoon")
     local conf = require("telescope.config").values
