@@ -357,8 +357,16 @@ return {
   },
   {
     "sindrets/diffview.nvim",
-    event = "VeryLazy", config = function(_,opts)
+    event = "VeryLazy",
+    config = function(_,opts)
+       require("diffview").setup(opts)
+    end
+  },
+  {
+    'junegunn/vim-easy-align',
+    event = "VeryLazy",
+    config = function(_,opts)
       return opts
     end
-    },
-  }
+  },
+}

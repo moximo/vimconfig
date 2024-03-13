@@ -110,6 +110,10 @@ return {
     ["gDo"]={":DiffviewOpen ",desc="DiffViewOpen",noremap = true, silent = true },
     ["gDh"]={":DiffviewFileHistory ",desc="DiffviewFileHistory",noremap = true, silent = true },
     ["gDq"]={":DiffviewClose<CR>",desc="DiffviewFileHistory",noremap = true, silent = true },
+    ["ga"]={
+      "<Plug>(EasyAlign)",
+      desc="EasyAlign"
+    },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
@@ -126,6 +130,10 @@ return {
     ["<leader>tr"]={
       ":Pantran<CR>",
       desc="translate"
+    },
+    ["ga"]={
+      "<Plug>(EasyAlign)",
+      desc="EasyAlign"
     },
   },
   i={
