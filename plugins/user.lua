@@ -116,6 +116,7 @@ return {
     "rest-nvim/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" },
     ft='http',
+    commit="91badd46c60df6bd9800c809056af2d80d33da4c",
     -- event = "VeryLazy",
     config = function()
       require("rest-nvim").setup({
@@ -145,7 +146,15 @@ return {
           formatters = {
             json = "jq",
             html = function(body)
-              return vim.fn.system({"tidy", "-i", "-q", "-"}, body)
+              return vim.fn.system({"tidy",
+                "-i",
+                "-q",
+                "--tidy-mark", "no",
+                "--show-body-only", "auto",
+                "--show-errors", "0",
+                "--show-warnings", "0",
+                "-",
+              }, body):gsub("\n$", "")
             end
           },
         },
@@ -369,4 +378,11 @@ return {
       return opts
     end
   },
+  {
+      "myplugin",
+      event = "VeryLazy",
+      name = "myplugin",
+      enabled=false,
+      dev = {true}
+  }
 }

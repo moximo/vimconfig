@@ -30,11 +30,33 @@ function setKeybinds()
                 require("jdtls.dap").test_nearest_method,"run test dap"
             },
         })
+    elseif fileTy == "toml" then
+        wk.register({
+            ["g"]={
+              Sf={':lua require("crates").show_features_popup()<cr>',"crates show_features_popup",mode={"n"}},
+              Sd={':lua require("crates").show_dependencies_popup()<cr>',"crates show_dependencies_popup",mode={"n"}},
+              Xh={':lua require("crates").open_homepage()<cr>',"crates open_homepage",mode={"n"}},
+              Xr={':lua require("crates").open_repository()<cr>',"crates open_repository",mode={"n"}},
+              Xd={':lua require("crates").open_documentation()<cr>',"crates open_documentation",mode={"n"}},
+              Xc={':lua require("crates").open_crates_io()<cr>',"crates open_crates_io",mode={"n"}},
+            }
+        })
     elseif fileTy == 'sh' then
 
     end
 end
 
+-- 以下操作对目录下的 md 文件进行文本替换并直接写入源文件，查看 diff，然后撤销写入。
+-- nvim -u NONE --headless\
+--  +"
+--   :args *.md
+--   :args
+--   :silent! argdo %s/a/.../ge | update"\
+--  +"
+--   :!git diff
+--   :silent! argdo undo | update"\
+--  +":qa"
+--
 -- telescope 中tab 选中结果,alt q 选择选择结果,ctrl q 全部结果,发送到quick fix
 -- cdo vs ldo：全局操作 vs 局部（当前 buffer）操作
 -- cdo vs cfdo：全部操作 vs 对每个文件只操作一次
