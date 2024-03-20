@@ -131,7 +131,7 @@ return {
     ["<leader>xx"] = { "<cmd>TroubleToggle document_diagnostics<cr>", noremap = true, silent = true },
     ["gDo"]={":DiffviewOpen ",desc="DiffViewOpen",noremap = true, silent = true },
     ["gDh"]={":DiffviewFileHistory ",desc="DiffviewFileHistory",noremap = true, silent = true },
-    ["gDq"]={":DiffviewClose<CR>",desc="DiffviewFileHistory",noremap = true, silent = true },
+    ["gDq"]={":DiffviewClose<CR>",desc="DiffviewClose",noremap = true, silent = true },
     ["ga"]={
       "<Plug>(EasyAlign)",
       desc="EasyAlign"

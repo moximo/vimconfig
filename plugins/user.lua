@@ -1,5 +1,5 @@
 require("notify").setup({
-    background_colour = "#000000",
+  background_colour = "#000000",
 })
 
 return {
@@ -202,7 +202,7 @@ return {
     "segeljakt/vim-silicon",
     event = "VeryLazy",
     config = function()
-       vim.g.silicon={
+      vim.g.silicon={
         output="~/Pictures/Screenshots/silicon-{time:%Y-%m-%d-%H%M%S}.png"
       }
     end
@@ -239,7 +239,7 @@ return {
   },
   {
     'mattn/emmet-vim',
-     event = "VeryLazy",
+    event = "VeryLazy",
   },
   {
     --依赖vineflower.jar(https://github.com/Vineflower/vineflower)
@@ -261,23 +261,24 @@ return {
       }
     }
   },
--- {
---   'mrcjkb/rustaceanvim',
---   version = '^4', -- Recommended
---   ft = { 'rust' },
--- },
-{
-  "m4xshen/smartcolumn.nvim",
-  event = { "InsertEnter", "User AstroFile" },
-  opts = {
-    colorcolumn="120",
-    disabled_filetypes = { "alpha", "neo-tree", "starter", "help", "text", "markdown" ,"mason","lazy" },
+  -- {
+  --   'mrcjkb/rustaceanvim',
+  --   version = '^4', -- Recommended
+  --   ft = { 'rust' },
+  -- },
+  {
+    "m4xshen/smartcolumn.nvim",
+    event = { "InsertEnter", "User AstroFile" },
+    opts = {
+      colorcolumn="120",
+      disabled_filetypes = { "alpha", "neo-tree", "starter", "help", "text", "markdown" ,"mason","lazy" },
+    },
   },
-},
-{
+  {
     "nvim-neotest/neotest",
     ft = { "go", "rust", "python","java" },
     dependencies = {
+      "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
@@ -323,44 +324,46 @@ return {
     end,
   },
   {
-      "ThePrimeagen/harpoon",
-      branch = "harpoon2",
-      dependencies = { "nvim-lua/plenary.nvim" },
-      config=function()
-     -- require("telescope").load_extension('harpoon')
-      end,
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config=function()
+      -- require("telescope").load_extension('harpoon')
+    end,
   },
   {
     "rcarriga/nvim-dap-ui",
     dependencies = {"mfussenegger/nvim-dap"},
     config=function(plugins,opts)
       opts.layouts = { {
-        elements = { {
-            id = "scopes",
-            size = 0.25
-          }, {
-            id = "breakpoints",
-            size = 0.25
-          }, {
-            id = "stacks",
-            size = 0.25
-          }, {
-            id = "watches",
-            size = 0.25
-          } },
+        elements = {
+          -- {
+          --   id = "scopes",
+          --   size = 0.25
+          -- }, {
+          --   id = "breakpoints",
+          --   size = 0.25
+          -- }, {
+          --   id = "stacks",
+          --   size = 0.25
+          -- }, {
+          --   id = "watches",
+          --   size = 0.25
+          -- } 
+        },
         position = "right",
         size = 35
       }, {
-        elements = { {
+          elements = { {
             id = "repl",
-            size = 0.2
+            size = 0.17
           }, {
-            id = "console",
-            size = 0.63
-          } },
-        position = "bottom",
-        size = 10
-      } }
+              id = "console",
+              size = 0.93
+            } },
+          position = "bottom",
+          size = 10
+        } }
       require("dapui").setup(opts)
     end
   },
@@ -368,7 +371,7 @@ return {
     "sindrets/diffview.nvim",
     event = "VeryLazy",
     config = function(_,opts)
-       require("diffview").setup(opts)
+      require("diffview").setup(opts)
     end
   },
   {
@@ -379,10 +382,16 @@ return {
     end
   },
   {
-      "myplugin",
-      event = "VeryLazy",
-      name = "myplugin",
-      enabled=false,
-      dev = {true}
+    -- ：Octo 管理github pr issue ...etc 
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      -- OR 'ibhagwan/fzf-lua',
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function ()
+      require"octo".setup()
+    end
   }
 }
