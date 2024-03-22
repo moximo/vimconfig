@@ -21,6 +21,7 @@ return {
     --     'change quot*es'            cs'"            "change quotes"
     --     <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1>
     --     delete(functi*on calls)     dsf             function calls
+    --     select|aaa|                 S'              select'aaa'
   },
   {
     -- open url with `gx`
@@ -72,7 +73,7 @@ return {
     event = "VeryLazy",
   },
   {
-    -- simple to find word, with `s`
+    -- simple to find word, with `s`,增强f,t
     "folke/flash.nvim",
     event = "VeryLazy",
     ---@type Flash.Config
@@ -384,6 +385,7 @@ return {
   {
     -- ：Octo 管理github pr issue ...etc 
     'pwntester/octo.nvim',
+    event = "VeryLazy",
     requires = {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope.nvim',

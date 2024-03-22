@@ -61,6 +61,23 @@ end
 -- cdo vs ldo：全局操作 vs 局部（当前 buffer）操作
 -- cdo vs cfdo：全部操作 vs 对每个文件只操作一次
 -- silent! noautocmd cdo ... | update
+--
+-- gi  - 返回上一次插入文本的地方。
+-- g;  - 返回上一个修改位置
+-- g,  - 返回下一个修改位置
+-- '. - 跳转到最后一次修改的地方(.代表最后一次修改的地方)
+-- '" - 上一次编辑文件的地方
+-- '' - 跳转到上次跳转之前的位置
+-- '^ - 跳转到上次 insert mode 停止的地方
+-- '( - 当前句子的开头
+-- ') - 当前句子的结尾
+-- '{ - 当前段落的开头
+-- '} - 当前段落的结尾
+-- '[ - 上一次修改或复制的第一行的第一个字符
+-- '] - 上一次修改或复制的最后一行的最后一个字符
+-- '< - 上一次Visual area的开始位置
+-- '> - 上一次Visual area的结束位置
+--
 function toggle_telescope()
     local harpoon = require("harpoon")
     local conf = require("telescope.config").values
