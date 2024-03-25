@@ -38,6 +38,7 @@ return {
     color_overrides = {},
     custom_highlights = {},
     integrations = {
+      harpoon=true,
       neotest = true,
       aerial = true,
       alpha = true,

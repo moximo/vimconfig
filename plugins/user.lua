@@ -329,6 +329,15 @@ return {
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
     config=function()
+      require("harpoon").setup({
+        settings = {
+          save_on_toggle = false,
+          sync_on_ui_close = true,
+          key = function()
+            return vim.loop.cwd()
+          end,
+        },
+      })
       -- require("telescope").load_extension('harpoon')
     end,
   },
