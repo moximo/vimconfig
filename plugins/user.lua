@@ -385,7 +385,8 @@ return {
     end
   },
   {
-    'junegunn/vim-easy-align',
+    --: gaip= ,gaip*^x(reg),可视模式ga=
+    "junegunn/vim-easy-align",
     event = "VeryLazy",
     config = function(_,opts)
       return opts
@@ -394,6 +395,7 @@ return {
   {
     -- ：Octo 管理github pr issue ...etc 
     'pwntester/octo.nvim',
+    enabled=false,
     event = "VeryLazy",
     requires = {
       'nvim-lua/plenary.nvim',
